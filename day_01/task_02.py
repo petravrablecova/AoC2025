@@ -10,9 +10,7 @@ rotations = list(map(lambda x: int(x.replace("L", "-").replace("R", "+")), rotat
 
 for rotation in rotations:
     step = rotation // abs(rotation)
-    points = list(
-        map(lambda x: x % 100, range(point + step, point + rotation + step, step))
-    )
+    points = list(map(lambda x: x % 100, range(point + step, point + rotation + step, step)))
     no_of_zero_clicks += points.count(0)
     point = (point + rotation) % 100
 
