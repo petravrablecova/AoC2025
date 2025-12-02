@@ -3,10 +3,10 @@
 no_of_zero_landings = 0
 point = 50
 
-with open('input.txt') as f:
+with open("input.txt") as f:
     rotations = f.read().splitlines()
 
-rotations = list(map(lambda x: int(x.replace('L', '-').replace('R', '+')), rotations))
+rotations = list(map(lambda x: int(x.replace("L", "-").replace("R", "+")), rotations))
 
 for rotation in rotations:
     point = (point + rotation) % 100
