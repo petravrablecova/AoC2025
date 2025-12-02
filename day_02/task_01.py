@@ -5,7 +5,7 @@ import re
 with open("input.txt") as f:
     id_ranges = f.read().split(",")
 
-invalid_ids = list()
+invalid_ids = []
 for id_range in id_ranges:
     start, stop = map(int, id_range.split("-"))
     id_range = list(map(str, range(start, stop + 1)))
