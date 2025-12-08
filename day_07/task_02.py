@@ -33,12 +33,12 @@ def children(row, column):
     else:
         next_split_row = "".join([manifold[i][column] for i in range(row + 1, len(manifold))]).index("^")
         next_split_row += row + 1
-        children = []
+        children_nodes = []
         if column - 1 >= 0:
-            children.append((next_split_row, column - 1))
+            children_nodes.append((next_split_row, column - 1))
         if column + 1 < len(manifold[row]):
-            children.append((next_split_row, column + 1))
-        return children
+            children_nodes.append((next_split_row, column + 1))
+        return children_nodes
 
 
 @functools.cache
